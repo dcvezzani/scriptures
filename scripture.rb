@@ -3,7 +3,7 @@
 
 require 'oga'
 require 'httpclient'
-require 'debugger'
+require 'byebug'
 require 'json'
 
 if(ARGV.length == 0)
@@ -78,6 +78,7 @@ class ElementNames
 
         if cur_class == 'verse'
           @text_cap << value.slice(0, value.length-1) + ". "
+          @cur_class = nil
         else
           @text_cap << value
         end
